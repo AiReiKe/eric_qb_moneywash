@@ -98,19 +98,22 @@ local WashMoney = function(zone)
                             Wait(1)
                         end
                         TriggerServerEvent("eric_moneywash:WashMoney", tonumber(data["washing_count"]), zone, eventID)
+                        washing = false
                     end, function()
                         TriggerEvent("eric_moneywash:notify", Lang:t('wash_fail'), "error")
+                        washing = false
                     end)
                     
                 else
                     TriggerEvent("eric_moneywash:notify", Lang:t('no_enough_black'), "error")
+                    washing = false
                 end
             end, tonumber(data["washing_count"]))
         else
             TriggerEvent("eric_moneywash:notify", Lang:t('count_empty'), "error")
+            washing = false
         end
     end
-    washing = false
 end
 
 RegisterNetEvent("eric_moneywash:updateValue")
