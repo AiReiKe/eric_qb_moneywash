@@ -17,10 +17,10 @@ version 1.0.1
 
 ⚠ 此插件為免費提供 嚴禁轉賣或從事任何商業行為 ⚠
 
-##dependencies##
+## dependencies ##
 1. qb-core
 2. qb-input
 
 ---
-1.0.1 更新:
+### 1.0.1 更新: ###
 修正部分語法
